@@ -1,0 +1,566 @@
+ body,html{
+    height: 100%;
+    overflow: hidden;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    display: block;
+}
+img{
+    display: block;
+}
+body, h1, h2, h3, h4, h5, h6, html, li, p, ul {
+    margin: 0;
+    padding: 0;
+    font: 14px "微软雅黑";
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+img{
+    display: block;
+}
+ @keyframes move1 {
+     0% {
+         transform: translate(330px, -1000px)
+     }
+     20% {
+         transform: translate(330px, 0)
+     }
+     40% {
+         transform: translate(330px, -50px)
+     }
+     60% {
+         transform: translate(330px, 0)
+     }
+     100% {
+         transform: translate(0, 0)
+     }
+ }
+
+ @keyframes move2 {
+     0% {
+         transform: translate(0, -1000px)
+     }
+     20% {
+         transform: translate(0, 0)
+     }
+     40% {
+         transform: translate(0, -50px)
+     }
+     60% {
+         transform: translate(0, 0)
+     }
+     100% {
+         transform: translate(0, 0)
+     }
+ }
+
+ @keyframes move3 {
+     0% {
+         transform: translate(-330px, -1000px)
+     }
+     20% {
+         transform: translate(-330px, 0)
+     }
+     40% {
+         transform: translate(-330px, -50px)
+     }
+     60% {
+         transform: translate(-330px, 0)
+     }
+     100% {
+         transform: translate(0, 0)
+     }
+ }
+#wrap .header{
+    width: 100%;
+    height: 60px;
+    background-color: rgba(0,0,0,.8);
+}
+#wrap .header .headerContent{
+    width: 980px;
+    height: 100%;
+    margin:0 auto;
+
+}
+ .headerContent .logo{
+    float: left;
+     margin: 16px 20px 0 0;
+}
+
+
+ .headerContent nav{
+     float: right;
+ }
+.headerContent nav ul{
+    width: 450px;
+    overflow: hidden;
+
+}
+nav ul li{
+    width: 90px;
+    float: left;
+    line-height: 60px;
+    text-align: center;
+
+}
+.headerContent nav ul li:hover {
+    background: #fc0
+}
+.headerContent nav ul li:hover a {
+    color: #000
+}
+.headerContent nav ul li.active {
+    background: #fc0;
+}
+.headerContent nav ul li a{
+
+    display: block;
+    line-height: 60px;
+    text-align: center;
+    color: #aaaaaa;
+}
+.headerContent nav ul li.active a {
+    color: #000;
+}
+
+#wrap .content{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height:500px;
+
+}
+ ul.sideNav{
+     position: fixed;
+     top: 50%;
+     right: 1%;
+     z-index: 3
+ }
+ul.sideNav li{
+    width: 10px;
+    height: 10px;
+    border: 1px solid;
+    border-radius: 50% 50%;
+    margin-top: 10px;
+}
+#wrap .content .sideNav li:hover {
+    background: #000;
+    cursor: default
+}
+ul.sideNav li.active{
+    background: #000;
+    cursor: default
+}
+#wrap .content .contentList {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: 1s top
+}
+ul.contentList .firstLi{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url("../img/s1.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+#wrap .content .contentList .firstLi section {
+    width: 980px;
+    height: 578px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto
+}
+#wrap .content .contentList .firstLi section .first {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto
+}
+#wrap .content .contentList .firstLi section .first img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -545px;
+    margin-top: -260px;
+    transition: .5s opacity
+}
+
+ ul.contentList .secondLi{
+  position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url("../img/s2.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50% !important;
+}
+ul.contentList .secondLi section{
+    width: 980px;
+    height: 578px;
+     position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+ul.contentList .secondLi section .second{
+   width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    margin: 0
+ }
+ul.contentList .secondLi .second .left{
+  position: absolute;
+    left: -140px;
+    width: 847px;
+    height: 437px;
+    margin-top: 40px;
+    z-index: 1;
+}
+.second .left .photoList{
+    width: 100%;
+    height: 100%;
+}
+ .second .left .photoList li{
+
+     float: left;
+     margin-right: 20px;
+     text-align: center;
+     transition: 1s transform
+}
+.second .left .photoList li p {
+    margin: 20px 0;
+    font-size: 18px
+}
+.second .left .photoList li a{
+    width: 98px;
+    height: 30px;
+    margin-left: 80px;
+    background: #ffcc00;
+    background: url("../img/buy.jpg")no-repeat;
+    background-position: 50% 50%;
+}
+ .second .right{
+     position: absolute;
+     right:0;
+     margin-top:5%;
+     border-right: 2px solid;
+     padding-right: 15px;
+
+ }
+ .second .right h1{
+    font-size: 34px;
+    color: #333;
+    font-weight: 100;
+    text-align: right;
+}
+ .second .right p{
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    text-align: right;
+}
+.second .right a{
+    text-align: right;
+    color: #333;
+}
+ .secondLi .bg{
+     position: absolute;
+     right: -193px;
+     bottom: 0;
+ }
+ul.contentList .thirdLi{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/s3.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50% !important;
+    overflow: hidden;
+}
+ul.contentList .thirdLi section{
+    width: 980px;
+    height: 578px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+
+}
+.thirdLi section .third {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto
+}
+ul.contentList .thirdLi .third .left{
+    position: absolute;
+    left: -140px;
+    width: 847px;
+    height: 437px;
+    margin-top: 40px;
+    z-index: 1;
+}
+.third .left .photoList{
+    width: 100%;
+    height: 100%
+}
+.third .left .photoList li{
+    float: left;
+    margin-right: 20px;
+    text-align: center;
+}
+.third .left .photoList li p {
+    margin: 20px 0;
+    font-size: 18px
+}
+.third .left .photoList li a{
+    width: 98px;
+    height: 30px;
+    margin-left: 80px;
+    background: #ffcc00;
+    background: url("../img/buy.jpg")no-repeat;
+    background-position: 50% 50%;
+}
+.third .right{
+    position: absolute;
+    right: -15%;
+    margin-top:5%;
+    border-right: 2px solid;
+    padding-right: 15px;
+}
+.third .right h1{
+    font-size: 34px;
+    color: #333;
+    font-weight: 100;
+    text-align: right;
+}
+.third .right p{
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    text-align: right;
+}
+.third .right a{
+    text-align: right;
+    color: #333;
+}
+.third .bg{
+    position: absolute;
+    right: -193px;
+    bottom: 0;
+}
+ul.contentList .fourLi{
+    background-image: url("../img/s4.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%!important;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+ul.contentList .fourLi section{
+    width: 980px;
+    height: 578px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+
+}
+ul.contentList .fourLi section .four{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+
+}
+ul.contentList .fourLi .four .left{
+    position: absolute;
+    left: -155px;
+    width:1000px;
+    height: 437px;
+    margin-top: 40px;
+    z-index: 1;
+}
+.four .left .photoList{
+    width: 100%;
+    height:100%;
+
+}
+.four .left .photoList li{
+    float: left;
+    margin-right: 20px;
+    text-align: center;
+}
+.four .left .photoList li p{
+    margin: 20px 0;
+    font-size: 18px;
+}
+.four .left .photoList li a{
+    width: 98px;
+    height: 30px;
+    margin-left: 80px;
+    background: #ffcc00;
+    background: url("../img/buy.jpg") no-repeat;
+    background-position: 50% 50%;
+}
+.four .right{
+    position: absolute;
+    right: -10%;
+    margin-top:5%;
+    border-right: 2px solid;
+    padding-right: 15px;
+}
+.four .right h1{
+    font-size: 34px;
+    color: #333;
+    font-weight: 100;
+    text-align: right;
+}
+.four .right p{
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    text-align: right;
+}
+.four .right a{
+    text-align: right;
+    color: #333;
+}
+.four .bg{
+    position: absolute;
+    right: -193px;
+    bottom: 0;
+}
+ul.contentList .fiveLi{
+    background-image: url("../img/s4.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%!important;
+    position: relative;
+    width: 100%;
+    height:100%;
+    overflow: hidden;
+}
+ul.contentList .fiveLi section{
+    width: 980px;
+    height: 578px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+
+}
+ ul.contentList .fiveLi section .five{
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     left: 0;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     margin: auto;
+
+ }
+ ul.contentList .fiveLi .five .left{
+     position: absolute;
+     left: -155px;
+     width:1000px;
+     height: 437px;
+    margin-top: 40px;
+    z-index: 1;
+}
+.five .left .photoList{
+    width: 100%;
+    height:100%;
+
+}
+.five .left .photoList li{
+    float: left;
+    margin-right: 20px;
+    text-align: center;
+}
+.five .left .photoList li p{
+    margin: 20px 0;
+    font-size: 18px;
+}
+.five .left .photoList li a{
+    width: 98px;
+    height: 30px;
+    margin-left: 80px;
+    background: #ffcc00;
+    background: url("../img/buy.jpg") no-repeat;
+    background-position: 50% 50%;
+}
+.five .right{
+    position: absolute;
+    right: -10%;
+    margin-top:5%;
+    border-right: 2px solid;
+    padding-right: 15px;
+}
+.five .right h1{
+    font-size: 34px;
+    color: #333;
+    font-weight: 100;
+    text-align: right;
+}
+.five .right p{
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    text-align: right;
+}
+.five .right a{
+    text-align: right;
+    color: #333;
+}
+.five .bg{
+    position: absolute;
+    right: -193px;
+    bottom: 0;
+}
+
