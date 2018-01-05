@@ -4,7 +4,7 @@ $(function () {
   var $cLiNodes=$cList.children("li");
 
   var $head=$("#wrap>header")
-  var $nList=$head.find(".headContent>nav>ul>li");
+  var $nList = $("#wrap .header .headerContent>nav>ul>li")
   var $plist=$content.find(".sideNav>li");
   var $firstLiImg=$cList.find(".firstLi img");
 
